@@ -98,7 +98,7 @@
             cursor: pointer;
             box-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
             opacity: 0;
-            animation: fadeInUp 1.2s ease-out 0.7s forwards, pulseGlow 2s infinite 2.3s;
+            animation: fadeInDown 1.2s ease-out 0.7s forwards, pulseGlow 2s infinite 2.3s;
             transition: 0.3s;
         }
 
@@ -116,11 +116,6 @@
 
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -177,7 +172,7 @@
 
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 
-        /* ستايل الأقسام العام بحركة ممتازة ومتناسقة */
+        /* ستايل الأقسام العام بحركة هبوط ممتازة ومتناسقة للاستعراض */
         section {
             background: var(--section-bg);
             margin-bottom: 35px;
@@ -247,7 +242,7 @@
             direction: ltr;
         }
 
-        /* ستايل القوانين والتعليمات بدون نجوم أو رموز تعبيرية */
+        /* ستايل القوانين والتعليمات بدون إيموجيات */
         .rules-list { list-style: none; padding: 0; }
         .rules-list li {
             background: var(--card-bg);
@@ -292,7 +287,6 @@
 
     <!-- شاشة البداية الترحيبية -->
     <div id="welcome-screen">
-        <!-- ضع رابط شعار التدريبات العسكرية هنا ليظهر بدلاً من الكوكب -->
         <img class="welcome-main-logo" src="https://media.discordapp.net/attachments/1244185343268487238/1509525390446563338/image1_3.png?ex=6a197e92&is=6a182d12&hm=8f33405e8b35ba17f5c4705f78942308e3ffabc93bf7e94d905dbfa9739e8dac&=&format=webp&quality=lossless" alt="شعار التدريبات">
         <div class="welcome-title">التدريبات العسكرية | KR</div>
         
@@ -305,11 +299,10 @@
 
     <!-- الهيدر الرئيسي للموقع -->
     <header>
-        <!-- ضع رابط شعار التدريبات العسكرية هنا أيضاً -->
-        <img class="header-logo" src="https://media.discordapp.net/attachments/1244185343268487238/1509525390446563338/image1_3.png?ex=6a197e92&is=6a182d12&hm=8f33405e8b35ba17f5c4705f78942308e3ffabc93bf7e94d905dbfa9739e8dac&=&format=webp&quality=lossless" alt="شعار التدريبات" data-aos="fade-up">
-        <h1 data-aos="fade-up" data-aos-delay="150">بوابة التدريبات العسكرية | KR</h1>
+        <img class="header-logo" src="https://media.discordapp.net/attachments/1244185343268487238/1509525390446563338/image1_3.png?ex=6a197e92&is=6a182d12&hm=8f33405e8b35ba17f5c4705f78942308e3ffabc93bf7e94d905dbfa9739e8dac&=&format=webp&quality=lossless" alt="شعار التدريبات" data-aos="fade-down">
+        <h1 data-aos="fade-down" data-aos-delay="150">بوابة التدريبات العسكرية | KR</h1>
         
-        <div class="datetime-bar" data-aos="fade-up" data-aos-delay="300">
+        <div class="datetime-bar" data-aos="fade-down" data-aos-delay="300">
             <div class="datetime-item">ميلادي: <span id="gregorian-date">--/--/----</span></div>
             <div class="datetime-divider">|</div>
             <div class="datetime-item">هجري: <span id="hijri-date">--/--/----</span></div>
@@ -320,41 +313,41 @@
 
     <div class="container">
         
-        <!-- قسم قيادة الدورة - تأثير حركة ناعم وممتاز وموحد للكل -->
-        <section data-aos="fade-up" data-aos-duration="1000">
+        <!-- تأثير الحركة المحدث: حركة هبوط احترافية تظهر القسم بانسيابية كاملة -->
+        <section data-aos="fade-down" data-aos-duration="1000">
             <h2>أسماء قيادة الدورة</h2>
             <div class="leadership-container">
                 
-                <div class="leadership-row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="leader-info"><span class="leader-title">مسؤول التدريبات العسكرية:</span> عبدالله العتيبي</div>
+                <div class="leadership-row" data-aos="fade-down" data-aos-delay="100">
+                    <div class="leader-info"><span class="leader-title">مسؤول الشؤون العسكرية:</span> عبدالله العتيبي</div>
                     <div class="leader-discord">op_a</div>
                 </div>
 
-                <div class="leadership-row" data-aos="fade-up" data-aos-delay="200">
-                    <div class="leader-info"><span class="leader-title">نائب مسؤول التدريبات العسكرية:</span> عبدالله القحطاني</div>
+                <div class="leadership-row" data-aos="fade-down" data-aos-delay="200">
+                    <div class="leader-info"><span class="leader-title">نائب مسؤول الشؤون العسكرية:</span> عبدالله القحطاني</div>
                     <div class="leader-discord">72un</div>
                 </div>
 
-                <div class="leadership-row" data-aos="fade-up" data-aos-delay="300">
-                    <div class="leader-info"><span class="leader-title">مساعد مسؤول التدريبات العسكرية:</span> نواف الحكمي</div>
+                <div class="leadership-row" data-aos="fade-down" data-aos-delay="300">
+                    <div class="leader-info"><span class="leader-title">مساعد مسؤول الشؤون العسكرية:</span> نواف الحكمي</div>
                     <div class="leader-discord">nawaf8203</div>
                 </div>
 
-                <div class="leadership-row" data-aos="fade-up" data-aos-delay="400">
-                    <div class="leader-info"><span class="leader-title">إدارة التدريبات العسكرية:</span> سعود الظفيري</div>
+                <div class="leadership-row" data-aos="fade-down" data-aos-delay="400">
+                    <div class="leader-info"><span class="leader-title">إدارة الشؤون العسكرية:</span> سعود الظفيري</div>
                     <div class="leader-discord">aas1122120368</div>
                 </div>
 
-                <div class="leadership-row" data-aos="fade-up" data-aos-delay="500">
-                    <div class="leader-info"><span class="leader-title">إدارة التدريبات العسكرية:</span> خالد الأسمري</div>
+                <div class="leadership-row" data-aos="fade-down" data-aos-delay="500">
+                    <div class="leader-info"><span class="leader-title">إدارة الشؤون العسكرية:</span> خالد الأسمري</div>
                     <div class="leader-discord">khalid9556</div>
                 </div>
 
             </div>
         </section>
 
-        <!-- القسم الأول: قوانين التدريبات -->
-        <section data-aos="fade-up" data-aos-duration="1000">
+        <!-- القسم الأول: قوانين التدريبات - هبوط القسم بالكامل عند النزول -->
+        <section data-aos="fade-down" data-aos-duration="1000">
             <h2>القسم الأول: قوانين التدريبات</h2>
             <ul class="rules-list">
                 <li>الالتزام بالاحترام والتعامل الحسن بين الجميع داخل التدريبات.</li>
@@ -366,8 +359,8 @@
             </ul>
         </section>
 
-        <!-- القسم الثاني: تعليمات التدريبات -->
-        <section data-aos="fade-up" data-aos-duration="1000">
+        <!-- القسم الثاني: تعليمات التدريبات - هبوط القسم بالكامل عند النزول -->
+        <section data-aos="fade-down" data-aos-duration="1000">
             <h2>القسم الثاني: تعليمات التدريبات العسكرية</h2>
             <ul class="rules-list">
                 <li>لا يحق لأي شخص إنشاء تدريب عام إلا بعد الوصول للرتبة المطلوبة واجتياز اختبار الاعتماد الخاص بإدارة الدورة.</li>
@@ -375,8 +368,8 @@
             </ul>
         </section>
 
-        <!-- القسم الثالث: الأوامر والمساعدات -->
-        <section data-aos="fade-up" data-aos-duration="1000">
+        <!-- القسم الثالث: الأوامر والمساعدات - هبوط القسم بالكامل عند النزول -->
+        <section data-aos="fade-down" data-aos-duration="1000">
             <h2>القسم الثالث: الأوامر والمساعدات</h2>
             <div class="grid-layout">
                 <div class="card">
@@ -391,8 +384,8 @@
             </div>
         </section>
 
-        <!-- قسم المستندات والروابط -->
-        <section style="text-align: center;" data-aos="fade-up" data-aos-duration="1000">
+        <!-- قسم المستندات والروابط - هبوط القسم بالكامل عند النزول -->
+        <section style="text-align: center;" data-aos="fade-down" data-aos-duration="1000">
             <h2>مستندات وروابط التدريبات العسكرية</h2>
             <div class="links-container">
                 <a href="https://docs.google.com/document/d/1cCbE2hd64_Ikey0BfHfTGjumltTGGW8UkfiFK2LhI-4/edit" target="_blank" class="btn-link">نظام مراجع المدربين</a>
@@ -410,7 +403,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // كود تلقائي لتغيير الفيفايكون (أيقونة المتصفح) لتطابق شعار التدريبات فور إدخال رابط الصورة
         window.addEventListener('DOMContentLoaded', () => {
             const mainLogoUrl = document.querySelector('.header-logo').getAttribute('src');
             if(mainLogoUrl && mainLogoUrl !== "ضع رابط شعار هنا") {
