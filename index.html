@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> التدريبات العسكرية | KR </title>
+    <title>التدريبات العسكرية | KR</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- تحديث أيقونة المتصفح لتأخذ شعار التدريبات العسكرية الخاص بك وتخفي الكوكب الرمادي -->
+    <link id="favicon" rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1244185343268487238/1509525390446563338/image1_3.png?ex=6a197e92&is=6a182d12&hm=8f33405e8b35ba17f5c4705f78942308e3ffabc93bf7e94d905dbfa9739e8dac&=&format=webp&quality=lossless">
+    
     <style>
-        /* الهوية البصرية: الأزرق الملكي والذهبي الفاخر مع لمسات التصميم الجديد */
+        /* الهوية البصرية الرسمية: الأزرق الملكي العميق والذهبي العسكري الفاخر */
         :root {
             --bg-deep: #060a17; 
             --section-bg: #0b152d; 
@@ -17,7 +20,6 @@
             --card-bg: #111e3d; 
             --text-light: #e6dfd9;
             --discord-color: #5865F2;
-            --accent-green: #00e676; /* اللون الأخضر المستوحى من الصورة */
             --lead-bg: #0a1120;
         }
 
@@ -27,7 +29,7 @@
             font-family: 'Cairo', sans-serif;
             margin: 0; padding: 0;
             line-height: 1.6;
-            overflow: hidden; /* منع التمرير قبل الضغط على ابدأ */
+            overflow: hidden;
         }
 
         /* شاشة البداية الترحيبية */
@@ -46,7 +48,6 @@
             padding: 20px;
         }
 
-        /* ستايل شعار التدريبات في أعلى شاشة الترحيب */
         .welcome-main-logo {
             width: 150px;
             height: 150px;
@@ -59,11 +60,10 @@
             animation: fadeInDown 1.2s ease-out 0.2s forwards;
         }
 
-        /* أنيميشن العنوان الترحيبي */
         .welcome-title {
             color: var(--gold-primary);
             font-size: 3.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-shadow: 0 0 20px rgba(197, 160, 89, 0.5);
             text-align: center;
             font-weight: bold;
@@ -71,29 +71,6 @@
             animation: fadeInDown 1.2s ease-out forwards;
         }
 
-        /* ستايل حساب الديسكورد الترحيبي */
-        .welcome-discord-badge {
-            background: rgba(88, 101, 242, 0.1);
-            border: 1px solid var(--discord-color);
-            padding: 6px 18px;
-            border-radius: 20px;
-            color: #fff;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 0 15px rgba(88, 101, 242, 0.2);
-            margin-bottom: 25px;
-            opacity: 0;
-            animation: fadeInDown 1.2s ease-out 0.4s forwards;
-        }
-
-        .welcome-discord-badge span {
-            color: var(--discord-color);
-            font-weight: bold;
-        }
-
-        /* ستايل نص إخلاء المسؤولية والتنويه */
         .disclaimer-text {
             max-width: 650px;
             text-align: center;
@@ -109,7 +86,6 @@
             animation: fadeInDown 1.2s ease-out 0.5s forwards;
         }
 
-        /* أنيميشن زر ابدأ */
         .start-btn {
             background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
             color: #060a17;
@@ -131,7 +107,6 @@
             box-shadow: 0 0 30px rgba(197, 160, 89, 0.7);
         }
 
-        /* تأثير الخروج عند الضغط على ابدأ */
         #welcome-screen.hidden {
             opacity: 0;
             transform: scale(1.2);
@@ -139,7 +114,6 @@
             pointer-events: none;
         }
 
-        /* تعريف الحركات (Keyframes) */
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-50px); }
             to { opacity: 1; transform: translateY(0); }
@@ -180,7 +154,7 @@
             margin: 5px 0 15px 0;
         }
 
-        /* شريط الوقت والتاريخ الذكي */
+        /* شريط الوقت والتاريخ */
         .datetime-bar {
             background: rgba(6, 10, 23, 0.7);
             border: 1px solid rgba(197, 160, 89, 0.3);
@@ -197,24 +171,13 @@
             margin-top: 10px;
         }
 
-        .datetime-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .datetime-item span {
-            color: var(--gold-primary);
-            font-weight: bold;
-        }
-
-        .datetime-divider {
-            color: rgba(197, 160, 89, 0.3);
-        }
+        .datetime-item { display: flex; align-items: center; gap: 8px; }
+        .datetime-item span { color: var(--gold-primary); font-weight: bold; }
+        .datetime-divider { color: rgba(197, 160, 89, 0.3); }
 
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 
-        /* ستايل الأقسام العام */
+        /* ستايل الأقسام العام بحركة ممتازة ومتناسقة */
         section {
             background: var(--section-bg);
             margin-bottom: 35px;
@@ -230,9 +193,9 @@
             box-shadow: 0 15px 35px rgba(197, 160, 89, 0.1);
         }
 
-        h2 { color: var(--gold-primary); border-bottom: 1px solid rgba(197, 160, 89, 0.15); padding-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        h2 { color: var(--gold-primary); border-bottom: 1px solid rgba(197, 160, 89, 0.15); padding-bottom: 15px; margin-top: 0; }
 
-        /* ستايل قائمة القيادة المستوحى من الصورة المرسلة تماماً */
+        /* ستايل صفوف القيادة */
         .leadership-container {
             display: flex;
             flex-direction: column;
@@ -242,8 +205,8 @@
 
         .leadership-row {
             background: var(--lead-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-left: 4px solid var(--accent-green);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            border-right: 4px solid var(--gold-primary);
             border-radius: 6px;
             padding: 15px 25px;
             display: flex;
@@ -254,25 +217,27 @@
 
         .leadership-row:hover {
             background: #0f192e;
-            border-color: var(--accent-green);
-            transform: scale(1.01);
+            border-color: var(--gold-primary);
         }
 
         .leader-info {
             font-size: 1.1rem;
             color: #ffffff;
             font-weight: bold;
+            text-align: right;
         }
 
         .leader-title {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--gold-primary);
             font-weight: normal;
+            margin-left: 5px;
         }
 
         .leader-discord {
-            background: var(--discord-color);
+            background: rgba(88, 101, 242, 0.15);
+            border: 1px solid var(--discord-color);
             color: #ffffff;
-            padding: 5px 15px;
+            padding: 6px 16px;
             border-radius: 4px;
             font-size: 0.9rem;
             font-weight: bold;
@@ -282,25 +247,15 @@
             direction: ltr;
         }
 
-        /* ستايل القوانين والتعليمات */
+        /* ستايل القوانين والتعليمات بدون نجوم أو رموز تعبيرية */
         .rules-list { list-style: none; padding: 0; }
         .rules-list li {
             background: var(--card-bg);
             margin-bottom: 12px;
-            padding: 18px 50px 18px 20px;
+            padding: 18px 20px 18px 20px;
             border-radius: 4px;
             position: relative;
             border-right: 4px solid var(--gold-primary);
-        }
-
-        .rules-list li::before {
-            content: "✦";
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gold-primary);
-            font-size: 1.2rem;
         }
 
         .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
@@ -337,16 +292,10 @@
 
     <!-- شاشة البداية الترحيبية -->
     <div id="welcome-screen">
-        <!-- هنا تضع رابط شعار المدربين الخاص بك -->
-        <img class="welcome-main-logo" src="https://media.discordapp.net/attachments/1244185343268487238/1509525390446563338/image1_3.png?ex=6a197e92&is=6a182d12&hm=8f33405e8b35ba17f5c4705f78942308e3ffabc93bf7e94d905dbfa9739e8dac&=&format=webp&quality=lossless" alt="[شعار المدربين]">
-        
+        <!-- ضع رابط شعار التدريبات العسكرية هنا ليظهر بدلاً من الكوكب -->
+        <img class="welcome-main-logo" src="https://media.discordapp.net/attachments/1244185343268487238/1509525390446563338/image1_3.png?ex=6a197e92&is=6a182d12&hm=8f33405e8b35ba17f5c4705f78942308e3ffabc93bf7e94d905dbfa9739e8dac&=&format=webp&quality=lossless" alt="شعار التدريبات">
         <div class="welcome-title">التدريبات العسكرية | KR</div>
         
-        <div class="welcome-discord-badge">
-             Discord: <span>KR_Community</span>
-        </div>
-        
-        <!-- نص إخلاء المسؤولية المضاف -->
         <div class="disclaimer-text">
             هذا الموقع أو النموذج الإلكتروني لا يمت للعالم الواقعي أو المملكة العربية السعودية وحكومتها أو أي جهة رسمية بِصلة، وإنما هو يحاكي واقع إفتراضي من وحي الخيال وجميع محتوياته لأغراض اللعب والترفيه فقط، ونُخلي مسؤوليتنا بشكل تام في حال إستغلال هذا الموقع لأغراض إاحتيالية، تشويهية، إنتحالية، عرضية، أو إستخدامه خارج إطار اللعب والمتعة والترفيه.
         </div>
@@ -356,12 +305,11 @@
 
     <!-- الهيدر الرئيسي للموقع -->
     <header>
-        <!-- هنا تضع رابط شعار المدربين الخاص بك أيضاً -->
-        <img class="header-logo" src="https://media.discordapp.net/attachments/1244185343268487238/1509525390446563338/image1_3.png?ex=6a197e92&is=6a182d12&hm=8f33405e8b35ba17f5c4705f78942308e3ffabc93bf7e94d905dbfa9739e8dac&=&format=webp&quality=lossless" alt="[شعار المدربين]" data-aos="zoom-in">
-        <h1 data-aos="fade-down" data-aos-delay="200">بوابة التدريبات العسكرية | KR</h1>
+        <!-- ضع رابط شعار التدريبات العسكرية هنا أيضاً -->
+        <img class="header-logo" src="https://media.discordapp.net/attachments/1244185343268487238/1509525390446563338/image1_3.png?ex=6a197e92&is=6a182d12&hm=8f33405e8b35ba17f5c4705f78942308e3ffabc93bf7e94d905dbfa9739e8dac&=&format=webp&quality=lossless" alt="شعار التدريبات" data-aos="fade-up">
+        <h1 data-aos="fade-up" data-aos-delay="150">بوابة التدريبات العسكرية | KR</h1>
         
-        <!-- شريط الوقت والتاريخ الذكي والمتحرك -->
-        <div class="datetime-bar" data-aos="fade-up" data-aos-delay="400">
+        <div class="datetime-bar" data-aos="fade-up" data-aos-delay="300">
             <div class="datetime-item">ميلادي: <span id="gregorian-date">--/--/----</span></div>
             <div class="datetime-divider">|</div>
             <div class="datetime-item">هجري: <span id="hijri-date">--/--/----</span></div>
@@ -372,41 +320,41 @@
 
     <div class="container">
         
-        <!-- قسم قيادة الدورة - بتأثير حركة مخصص -->
+        <!-- قسم قيادة الدورة - تأثير حركة ناعم وممتاز وموحد للكل -->
         <section data-aos="fade-up" data-aos-duration="1000">
             <h2>أسماء قيادة الدورة</h2>
             <div class="leadership-container">
                 
-                <div class="leadership-row" data-aos="fade-right" data-aos-delay="100">
+                <div class="leadership-row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-info"><span class="leader-title">مسؤول التدريبات العسكرية:</span> عبدالله العتيبي</div>
                     <div class="leader-discord">op_a</div>
-                    <div class="leader-info"><span class="leader-title">مسؤول الشؤون العسكرية:</span> عبدالله العتيبي</div>
                 </div>
 
-                <div class="leadership-row" data-aos="fade-right" data-aos-delay="200">
+                <div class="leadership-row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leader-info"><span class="leader-title">نائب مسؤول التدريبات العسكرية:</span> عبدالله القحطاني</div>
                     <div class="leader-discord">72un</div>
-                    <div class="leader-info"><span class="leader-title">نائب مسؤول الشؤون العسكرية:</span> عبدالله القحطاني</div>
                 </div>
 
-                <div class="leadership-row" data-aos="fade-right" data-aos-delay="300">
+                <div class="leadership-row" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leader-info"><span class="leader-title">مساعد مسؤول التدريبات العسكرية:</span> نواف الحكمي</div>
                     <div class="leader-discord">nawaf8203</div>
-                    <div class="leader-info"><span class="leader-title">مساعد مسؤول الشؤون العسكرية:</span> نواف الحكمي</div>
                 </div>
 
-                <div class="leadership-row" data-aos="fade-right" data-aos-delay="400">
+                <div class="leadership-row" data-aos="fade-up" data-aos-delay="400">
+                    <div class="leader-info"><span class="leader-title">إدارة التدريبات العسكرية:</span> سعود الظفيري</div>
                     <div class="leader-discord">aas1122120368</div>
-                    <div class="leader-info"><span class="leader-title">إدارة الشؤون العسكرية:</span> سعود الظفيري</div>
                 </div>
 
-                <div class="leadership-row" data-aos="fade-right" data-aos-delay="500">
+                <div class="leadership-row" data-aos="fade-up" data-aos-delay="500">
+                    <div class="leader-info"><span class="leader-title">إدارة التدريبات العسكرية:</span> خالد الأسمري</div>
                     <div class="leader-discord">khalid9556</div>
-                    <div class="leader-info"><span class="leader-title">إدارة الشؤون العسكرية:</span> خالد الأسمري</div>
                 </div>
 
             </div>
         </section>
 
         <!-- القسم الأول: قوانين التدريبات -->
-        <section data-aos="zoom-in-right" data-aos-duration="1100">
+        <section data-aos="fade-up" data-aos-duration="1000">
             <h2>القسم الأول: قوانين التدريبات</h2>
             <ul class="rules-list">
                 <li>الالتزام بالاحترام والتعامل الحسن بين الجميع داخل التدريبات.</li>
@@ -419,7 +367,7 @@
         </section>
 
         <!-- القسم الثاني: تعليمات التدريبات -->
-        <section data-aos="zoom-in-left" data-aos-duration="1100">
+        <section data-aos="fade-up" data-aos-duration="1000">
             <h2>القسم الثاني: تعليمات التدريبات العسكرية</h2>
             <ul class="rules-list">
                 <li>لا يحق لأي شخص إنشاء تدريب عام إلا بعد الوصول للرتبة المطلوبة واجتياز اختبار الاعتماد الخاص بإدارة الدورة.</li>
@@ -428,7 +376,7 @@
         </section>
 
         <!-- القسم الثالث: الأوامر والمساعدات -->
-        <section data-aos="flip-up" data-aos-duration="1000">
+        <section data-aos="fade-up" data-aos-duration="1000">
             <h2>القسم الثالث: الأوامر والمساعدات</h2>
             <div class="grid-layout">
                 <div class="card">
@@ -444,7 +392,7 @@
         </section>
 
         <!-- قسم المستندات والروابط -->
-        <section style="text-align: center;" data-aos="zoom-out" data-aos-duration="1200">
+        <section style="text-align: center;" data-aos="fade-up" data-aos-duration="1000">
             <h2>مستندات وروابط التدريبات العسكرية</h2>
             <div class="links-container">
                 <a href="https://docs.google.com/document/d/1cCbE2hd64_Ikey0BfHfTGjumltTGGW8UkfiFK2LhI-4/edit" target="_blank" class="btn-link">نظام مراجع المدربين</a>
@@ -462,6 +410,14 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // كود تلقائي لتغيير الفيفايكون (أيقونة المتصفح) لتطابق شعار التدريبات فور إدخال رابط الصورة
+        window.addEventListener('DOMContentLoaded', () => {
+            const mainLogoUrl = document.querySelector('.header-logo').getAttribute('src');
+            if(mainLogoUrl && mainLogoUrl !== "ضع رابط شعار هنا") {
+                document.getElementById('favicon').setAttribute('href', mainLogoUrl);
+            }
+        });
+
         function startPortal() {
             const welcomeScreen = document.getElementById('welcome-screen');
             welcomeScreen.classList.add('hidden');
@@ -478,7 +434,6 @@
 
         function updateDateTime() {
             const now = new Date();
-            
             let hours = now.getHours();
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
